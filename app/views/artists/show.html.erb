@@ -1,0 +1,17 @@
+<% if flash[:success]%>
+  <h1 style='color: green;'><%= flash[:success] %></h1>
+<% end %>
+
+<h1>SHOW!!!</h1>
+
+<p><%= @artist.name %></p>
+<p><%= @artist.title %></p>
+<p><%= @artist.age %></p>
+
+<h2>My Instruments</h2>
+<% @artist.instruments.each do |instrument| %>
+  <p><%= instrument.name %></p>
+<% end %>
+
+
+<%= link_to "Intrument Index", instruments_path %>
